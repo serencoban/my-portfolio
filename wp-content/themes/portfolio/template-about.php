@@ -1,7 +1,6 @@
 <?php /* Template Name: Page "À propos" */ ?>
 
 <?php get_header(); ?>
-test
     <aside>
         <h2>À propos de moi</h2>
     </aside>

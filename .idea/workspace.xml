@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="899b2f82-ee52-444c-881c-8825c28e289e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/template-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/template-about.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +34,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1746105924984</updated>
       <workItem from="1746105926184" duration="381000" />
-      <workItem from="1746106730578" duration="154000" />
+      <workItem from="1746106730578" duration="282000" />
+      <workItem from="1746107020191" duration="35000" />
     </task>
     <servers />
   </component>
