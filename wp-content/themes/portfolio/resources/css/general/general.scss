@@ -1,0 +1,57 @@
+/* Style de la page 404 */
+.not-found {
+  text-align: center;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+
+  &__title {
+    font-family: 'Boldonse', sans-serif;
+    color: #d9534f;
+    font-size: 2em;
+  }
+
+  &__message {
+    font-size: 1.1em;
+    color: #333;
+  }
+
+  &__link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/* styles.css (généré) */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.button {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  transition: background-color 0.3s ease;
+}
+
+.element {
+  animation: slideIn 1s ease-in-out;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
