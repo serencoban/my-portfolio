@@ -1,21 +1,33 @@
-<?php /* Template Name: Page "À propos" */ ?>
+<?php /* Template Name: Page "About" */ ?>
 
 <?php get_header(); ?>
-    <aside>
-        <h2>À propos de moi</h2>
-    </aside>
-    <?php 
-    // On ouvre "la boucle" (The Loop), la structure de contrôle
-    // de contenu propre à Wordpress:
-    if(have_posts()): while(have_posts()): the_post(); ?>
-
-        <div><?= get_the_content(); ?></div>
-
-    <?php
-    // On ferme "la boucle" (The Loop):
-    endwhile; else: ?>
-    <p>La page est vide.</p>
-    <?php endif; ?>
+    <section>
+        <h1>About me</h1>
+        <p>Seren Coban, I am passionate about creating innovative and visually appealing digital experiences. Let me help your projects flourish by designing warm, engaging, and user-friendly interfaces that truly connect with people.</p>
+    </section>
+    <section>
+        <h2>My studies</h2>
+        <ul>
+            <li>
+                <time>2016</time>
+                <p>Economics and Foreign Languages</p>
+                <p>Athénée Royal de Herstal</p>
+            </li>
+            <li>
+                <time>2022</time>
+                <p>Architecture</p>
+                <p>University of Liège</p>
+            </li>
+            <li>
+                <time>2023</time>
+                <p>Web development and design</p>
+                <p>Haute École de la Province de Liège</p>
+            </li>
+        </ul>
+    </section>
+<section>
+    <h2>My skills</h2>
+</section>
 <?php get_footer(); ?>
 
 

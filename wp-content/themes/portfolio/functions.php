@@ -96,43 +96,45 @@ remove_action('wp_head', 'wp_generator');
 
 function enqueue_assets_from_vite_manifest(): void
 {
-  $manifestPath = get_theme_file_path('public/.vite/manifest.json');
+    $manifestPath = get_theme_file_path('public/.vite/manifest.json');
 
-  if (file_exists($manifestPath)) {
-    $manifest = json_decode(file_get_contents($manifestPath), true);
+    if (file_exists($manifestPath)) {
+        $manifest = json_decode(file_get_contents($manifestPath), true);
 
-    // Vérifier et ajouter le fichier JavaScript
-    if (isset($manifest['wp-content/themes/portfolio/resources/js/main.js'])) {
-      wp_enqueue_script('portfolio', get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/js/main.js']['file']), [], null, true);
+        // Vérifier et ajouter le fichier JavaScript
+        if (isset($manifest['wp-content/themes/dw/resources/js/main.js'])) {
+            wp_enqueue_script('dw', get_theme_file_uri('public/' . $manifest['wp-content/themes/dw/resources/js/main.js']['file']), [], null, true);
+        }
+
+        // Vérifier et ajouter le fichier CSS
+        if (isset($manifest['wp-content/themes/dw/resources/css/styles.scss'])) {
+            wp_enqueue_style('dw', get_theme_file_uri('public/' . $manifest['wp-content/themes/dw/resources/css/styles.scss']['file']));
+        }
     }
-
-    // Vérifier et ajouter le fichier CSS
-    if (isset($manifest['wp-content/themes/portfolio/resources/css/styles.scss'])) {
-      wp_enqueue_style('portfolio', get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/css/styles.scss']['file']));
-    }
-  }
 }
 //enqueue_assets_from_vite_manifest();
 
 // 1. Charger un fichier "public" (asset/image/css/script/...) pour le front-end sans que cela ne s'applique à l'admin.
 function dw_asset(string $file): string
 {
-  $manifestPath = get_theme_file_path('public/.vite/manifest.json');
+    $manifestPath = get_theme_file_path('public/.vite/manifest.json');
 
-  if (file_exists($manifestPath)) {
-    $manifest = json_decode(file_get_contents($manifestPath), true);
+    if (file_exists($manifestPath)) {
+        $manifest = json_decode(file_get_contents($manifestPath), true);
 
-    if (isset($manifest['wp-content/themes/portfolio/resources/js/main.js']) && $file === 'js') {
-      return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/js/main.js']['file']);
+        if (isset($manifest['wp-content/themes/dw/resources/js/main.js']) && $file === 'js') {
+            return get_theme_file_uri('public/' . $manifest['wp-content/themes/dw/resources/js/main.js']['file']);
+        }
+
+        if (isset($manifest['wp-content/themes/dw/resources/css/styles.scss']) && $file === 'css') {
+            return get_theme_file_uri('public/' . $manifest['wp-content/themes/dw/resources/css/styles.scss']['file']);
+        }
     }
 
-    if (isset($manifest['wp-content/themes/portfolio/resources/css/styles.scss']) && $file === 'css') {
-      return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/css/styles.scss']['file']);
-    }
-  }
-
-  return get_template_directory_uri() . '/public/' . $file;
+    return get_template_directory_uri() . '/public/' . $file;
 }
+add_action('wp_enqueue_scripts', 'enqueue_assets_from_vite_manifest');
+
 
 // Permet d'ajouter la possibilité d'uploader des extensions de fichiers non compatibles de base.
 // Exemple : ici nous ajoutons le format SVG en tant que type d'image compatible pour l'upload.
@@ -154,95 +156,32 @@ add_theme_support('post-thumbnails', ['recipe', 'travel']);
 // Enregistrer de nouveaux "types de contenu", qui seront stockés dans la table
 // "wp_posts", avec un identifiant de type spécifique dans la colonne "post_type":
 
-register_post_type('recipe', [
-  'label' => 'Recettes',
-  'description' => 'Les recettes liées à nos voyages',
+register_post_type('work', [
+  'label' => 'Works',
+  'description' => 'My works',
   'menu_position' => 7,
-  'menu_icon' => 'dashicons-carrot',
+  'menu_icon' => 'dashicons-welcome-learn-more',
   'public' => true,
   'has_archive' => true,
   'rewrite' => [
-    'slug' => 'recettes',
+    'slug' => 'works',
   ],
   'supports' => ['title', 'excerpt', 'editor', 'thumbnail'],
 ]);
 
-register_post_type('travel', [
-  'label' => 'Voyages',
-  'description' => 'Les voyages que nous avons réalisés',
-  'menu_position' => 6,
-  'menu_icon' => 'dashicons-airplane',
-  'public' => true,
-  'has_archive' => true,
-  'rewrite' => [
-    'slug' => 'voyages',
-  ],
-  'supports' => ['title', 'excerpt', 'editor', 'thumbnail'],
-]);
 
-/*
-register_taxonomy('travel_type', ['travel'], [
+
+register_taxonomy('type_work', ['work'], [
   'labels' => [
-    'name' => 'Types de voyage',
-    'singular_name' => 'Type de voyage',
-    'menu_name' => 'Types de voyage',
-    'all_items' => 'Tous les types',
-    'edit_item' => 'Modifier le type',
-    'view_item' => 'Voir le type',
-    'update_item' => 'Mettre à jour le type',
-    'add_new_item' => 'Ajouter un nouveau type',
-    'new_item_name' => 'Nom du nouveau type',
-    'search_items' => 'Rechercher un type',
-    'not_found' => 'Aucun type trouvé',
+    'name' => 'Work type',
+    'singular_name' => 'Work type'
   ],
-  'description' => 'Types de voyages',
-  'public' => true,
-  'hierarchical' => true,
-  'show_ui' => true,
-  'show_admin_column' => true,
-  'show_tagcloud' => false,
-  'rewrite' => ['slug' => 'type-voyage'],
-]);
-*/
-
-// Ajouter des "catégories" (taxonomies) sur ces post_types :
-
-register_taxonomy('travel_type', ['travel'], [
-  'labels' => [
-    'name' => __hepl('Les types de voyages'),
-    'singular' => __hepl('Type de voyage')
-  ],
-  'description' => 'Types de voyages',
-  'public' => true,
-  'hierarchical' => true,
-  'show_ui' => true,
-  'show_admin_column' => true,
-  'show_tagcloud' => false,
-  'rewrite' => ['slug' => __hepl('type-de-voyage')],
-],
-);
-
-register_taxonomy('course', ['recipe'], [
-  'labels' => [
-    'name' => 'Services',
-    'singular_name' => 'Service'
-  ],
-  'description' => 'À quel moment du repas ce plat intervient-il ?',
+  'description' => 'Project type',
   'public' => true,
   'hierarchical' => true,
   'show_tagcloud' => false,
 ]);
 
-register_taxonomy('diet', ['recipe'], [
-  'labels' => [
-    'name' => 'Régimes alimentaires',
-    'singular_name' => 'Régime'
-  ],
-  'description' => 'À quel type de régime appartient cette recette ?',
-  'public' => true,
-  'hierarchical' => true,
-  'show_tagcloud' => false,
-]);
 
 // Paramétrer des tailles d'images pour le générateur de thumbnails de Wordpress :
 
@@ -288,41 +227,10 @@ function dw_get_navigation_links(string $location): array
   return $links;
 }
 
-// Ajouter un post-type custom pour sauvegarder les messages de contact
-
-register_post_type('contact_message', [
-  'label' => 'Messages de contact',
-  'description' => 'Les envois de formulaire via la page de contact',
-  'menu_position' => 10,
-  'menu_icon' => 'dashicons-email',
-  'public' => false,
-  'show_ui' => true,
-  'has_archive' => false,
-  'supports' => ['title', 'editor'],
-]);
-
 // Ajouter la fonctionnalité "POST" pour un formulaire de contact personnalisé :
 add_action('admin_post_dw_submit_contact_form', 'dw_handle_contact_form');
 add_action('admin_post_nopriv_dw_submit_contact_form', 'dw_handle_contact_form');
 
-
-
-function dw_handle_contact_form()
-{
-  $form = (new \DW_Theme\Forms\ContactForm())
-    ->rule('firstname', 'required')
-    ->rule('lastname', 'required')
-    ->rule('email', 'required')
-    ->rule('email', 'email')
-    ->rule('message', 'required')
-    ->rule('message', 'no_test')
-    ->sanitize('firstname', 'sanitize_text_field')
-    ->sanitize('lastname', 'sanitize_text_field')
-    ->sanitize('email', 'sanitize_text_field')
-    ->sanitize('message', 'sanitize_textarea_field');
-
-  return $form->handle($_POST);
-}
 
 // Créer une fonction qui permet de créer des pages d'options ACF pour le thème :
 function create_site_options_page(): void
@@ -350,4 +258,3 @@ function create_site_options_page(): void
 }
 
 add_action('acf/init', 'create_site_options_page');
-

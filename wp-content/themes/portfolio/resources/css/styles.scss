@@ -4,13 +4,7 @@
 @use 'settings/colors';
 @use 'settings/fonts';
 
-@use 'content/text-media';
-@use 'content/stage';
-@use 'content/searchbar';
-@use 'content/trip';
-
-@use 'general/general';
 @use 'general/header';
-@use 'general/navigation';
-@use 'general/languages';
+@use 'general/front-page';
+@use 'general/footer';
 
