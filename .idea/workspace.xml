@@ -4,9 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="899b2f82-ee52-444c-881c-8825c28e289e" name="Changes" comment="">
+    <list default="true" id="899b2f82-ee52-444c-881c-8825c28e289e" name="Changes" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/template-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/template-about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/front-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/front-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/public/.vite/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/public/.vite/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/public/assets/css-4IxQ4wQO.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/public/assets/js-Bzsld0tX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/content/searchbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/content/stage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/content/text-media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/content/trip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/about.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/front-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/front-page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/general.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/work.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/languages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/navigation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/work.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/works.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/general/works.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/settings/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/settings/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/settings/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/settings/fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/utils/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/css/utils/reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/img/star_empty.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/img/star_filled.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/template-projects.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +89,38 @@
       <updated>1746105924984</updated>
       <workItem from="1746105926184" duration="381000" />
       <workItem from="1746106730578" duration="282000" />
-      <workItem from="1746107020191" duration="35000" />
+      <workItem from="1746107020191" duration="10896000" />
+      <workItem from="1746125194261" duration="12386000" />
+      <workItem from="1746197760800" duration="36000" />
+      <workItem from="1746197879173" duration="12000" />
+      <workItem from="1746366949170" duration="6823000" />
+      <workItem from="1746462090477" duration="6000" />
+      <workItem from="1746476499406" duration="18000" />
+      <workItem from="1746478702693" duration="65000" />
+      <workItem from="1747035789349" duration="4144000" />
+      <workItem from="1747119637381" duration="22000" />
+      <workItem from="1747119770834" duration="5000" />
+      <workItem from="1747119846792" duration="26000" />
+      <workItem from="1747214988142" duration="638000" />
+      <workItem from="1747329368991" duration="1571000" />
+      <workItem from="1747331429938" duration="17623000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1747377907027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747377907027</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>

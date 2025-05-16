@@ -8,7 +8,7 @@
     "serve": "browser-sync start --proxy 'http://wordpress-201.test' --files 'wp-content/themes/portfolio/public/**/*' --no-https --port 8000"
   },
   "keywords": [],
-  "author": "Dylan Jacquet",
+  "author": "Seren Coban",
   "license": "ISC",
   "description": "",
   "devDependencies": {

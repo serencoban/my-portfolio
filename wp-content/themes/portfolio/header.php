@@ -9,18 +9,24 @@
   <?php wp_head(); ?>
 </head>
 <body>
-<header class="header">
-  <h1 class="hidden"></h1>
-    <nav role="navigation">
-        <h2></h2>
-        <img title="resources/img/seren-logo.svg" src="" alt="">
-        <div>
-            <?php wp_nav_menu([
-                'theme_location' => 'header',
-                'container' => 'nav',
-            ]); ?>
-        </div>
-
-
+<header>
+  <h1 class="hidden"><?php the_title(); ?></h1>
+    <div class="nav_container">
+            <img src="resources/img/logo.svg" alt="">
+        <nav class="nav_menu">
+            <h2 class="hidden"></h2>
+            <div id="menuToggle">
+                <input type="checkbox" id="menuCheckbox"/>
+                <span></span>
+                <span></span>
+                <div>
+                    <?php wp_nav_menu([
+                        'theme_location' => 'header',
+                        'container' => 'nav',
+                    ]); ?>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <main>
